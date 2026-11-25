@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedra, Papel e Tesoura</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Pedra, Papel e Tesoura</h1>
+    <p class="subtitulo">Escolha sua jogada e tente bater o seu recorde.</p>
+
+    <!-- Campo com validação: campo vazio ou letra no lugar de número -->
+    <section class="config">
+      <label for="meta">Meta de vitórias (1 a 10):</label>
+      <input id="meta" type="text" inputmode="numeric" value="3" placeholder="Ex.: 3">
+      <p id="erro-meta" class="erro" aria-live="polite"></p>
+    </section>
+
+    <!-- Placar da partida e recorde salvo no localStorage -->
+    <section class="placar">
+      <div class="card">
+        <span>Você</span>
+        <strong id="pontos-jogador">0</strong>
+      </div>
+      <div class="card">
+        <span>Empates</span>
+        <strong id="pontos-empate">0</strong>
+      </div>
+      <div class="card">
+        <span>Computador</span>
+        <strong id="pontos-pc">0</strong>
+      </div>
+    </section>
+
+    <p class="recorde">
+      Recorde de vitórias seguidas: <strong id="recorde">0</strong>
+    </p>
+
+    <!-- Botões de jogada -->
+    <section class="botoes">
+      <button type="button" class="btn-jogada" data-jogada="pedra">🪨 Pedra</button>
+      <button type="button" class="btn-jogada" data-jogada="papel">📄 Papel</button>
+      <button type="button" class="btn-jogada" data-jogada="tesoura">✂️ Tesoura</button>
+    </section>
+
+    <!-- Resultado da rodada -->
+    <p id="resultado" class="resultado">Faça sua primeira jogada!</p>
+
+    <!-- Ações extras -->
+    <section class="acoes">
+      <button id="btn-reiniciar" type="button" class="secundario">Nova partida</button>
+      <button id="btn-zerar-recorde" type="button" class="secundario">Zerar recorde</button>
+    </section>
+
+    <!-- Histórico renderizado a partir de um array com laço for -->
+    <section class="historico-box">
+      <h2>Histórico da partida</h2>
+      <p id="sem-historico" class="vazio">Nenhuma rodada jogada ainda.</p>
+      <ul id="lista-historico" class="historico"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

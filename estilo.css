@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 24px 16px;
+  background: #141820;
+  color: #f1f5f9;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #1e2430;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 6px;
+  color: #f7df1e;
+}
+
+.subtitulo {
+  margin: 0 0 20px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.config {
+  margin-bottom: 18px;
+}
+
+.config label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.config input {
+  width: 120px;
+  padding: 8px;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.config input.campo-erro {
+  border-color: #ef4444;
+  background: #2b1418;
+}
+
+.erro {
+  min-height: 18px;
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #f87171;
+}
+
+.placar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 12px 8px;
+  border-radius: 10px;
+}
+
+.card span {
+  display: block;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.card strong {
+  font-size: 26px;
+  color: #f8fafc;
+}
+
+.recorde {
+  margin: 8px 0 18px;
+  font-size: 14px;
+  color: #facc15;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.1s, background 0.2s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-jogada {
+  flex: 1 1 130px;
+  padding: 14px 12px;
+  background: #f7df1e;
+  color: #141820;
+  font-weight: bold;
+}
+
+.btn-jogada:hover {
+  background: #ffe94a;
+}
+
+.resultado {
+  margin: 18px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #0f172a;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+.resultado.vitoria {
+  background: #143325;
+  color: #4ade80;
+}
+
+.resultado.derrota {
+  background: #381820;
+  color: #fb7185;
+}
+
+.resultado.empate {
+  background: #2f2a14;
+  color: #facc15;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.secundario {
+  padding: 8px 14px;
+  font-size: 14px;
+  background: #334155;
+  color: #f1f5f9;
+}
+
+.secundario:hover {
+  background: #475569;
+}
+
+.historico-box {
+  text-align: left;
+  border-top: 1px solid #334155;
+  padding-top: 16px;
+}
+
+.historico-box h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.vazio {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.historico {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.historico li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #0f172a;
+  font-size: 14px;
+}
